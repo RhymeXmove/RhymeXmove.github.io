@@ -986,6 +986,7 @@ body {
 #nexmoe-content .nexmoe-posts .nexmoe-post {
   width: 100%;
   margin-bottom: 40px;
+  box-shadow: 4px 6px 5px 0px rgba(255,64,129,0.271);
 }
 #nexmoe-content .nexmoe-posts .nexmoe-post article p:first-child {
   margin-top: 0;
