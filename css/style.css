@@ -1207,7 +1207,7 @@ body {
 .nexmoe-post-right .nexmoe-fixed {
   position: fixed;
   z-index: 1000;
-  height: 100vh;
+  height: 120vh;
   display: inline-block;
   top: 0;
 }
