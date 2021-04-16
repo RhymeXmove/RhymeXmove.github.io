@@ -1208,9 +1208,10 @@ body {
 .nexmoe-post-right .nexmoe-fixed {
   position: fixed;
   z-index: 1000;
-  height: 120vh;
+  height: 95vh;
   display: inline-block;
   top: 0;
+  overflow-y: auto;
 }
 .nexmoe-post-right .nexmoe-tool {
   position: absolute;
@@ -1245,7 +1246,8 @@ body {
 }
 .nexmoe-post-right .nexmoe-toc {
   margin-left: 16px;
-  width: 240px;
+  margin-top: 20px;
+  width: 300px;
   text-align: left;
 }
 .nexmoe-post-right .nexmoe-toc a {
