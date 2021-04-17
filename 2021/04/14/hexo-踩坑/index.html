@@ -20,7 +20,7 @@
 <meta property="og:description" content="Hexo 遇到的问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-13T18:52:54.000Z">
-<meta property="article:modified_time" content="2021-04-17T10:26:22.959Z">
+<meta property="article:modified_time" content="2021-04-17T16:14:44.864Z">
 <meta property="article:author" content="shanX">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -29,7 +29,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_0pu9g34uux2d.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1618675053078">
+  <link rel="stylesheet" href="/css/style.css?v=1618676186536">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -213,7 +213,7 @@
             <div class="nexmoe-toc">
                 
                 
-                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%98%E5%8F%A0%E6%96%87%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">折叠文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">新建文章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E8%AE%BE%E7%BD%AEnew-post-name%E7%9A%84%E7%96%91%E9%97%AE"><span class="toc-number">2.1.</span> <span class="toc-text">hexo设置new_post_name的疑问</span></a></li></ol></li></ol>
+                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%98%E5%8F%A0%E6%96%87%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">折叠文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">新建文章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E8%AE%BE%E7%BD%AEnew-post-name%E7%9A%84%E7%96%91%E9%97%AE"><span class="toc-number">2.1.</span> <span class="toc-text">hexo设置new_post_name的疑问</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-%E6%96%87%E7%AB%A0%E4%B8%AD%E5%9B%BE%E7%89%87%E5%BC%95%E5%85%A5%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">hexo 文章中图片引入问题</span></a></li></ol>
                 
             </div>
         </div>
@@ -231,8 +231,8 @@
     
     <div class="nexmoe-post-meta nexmoe-rainbow-fill" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月14日</a>
-    <a><i class="nexmoefont icon-areachart"></i>152 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>544 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
     <p>Hexo 遇到的问题</p>
@@ -262,6 +262,18 @@ hexo new page &lt;title&gt; // 页面
 结果：举个栗子-20210414.md
 </code></pre>
 <p>from：<a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000008833637">https://segmentfault.com/q/1010000008833637</a></p>
+<h1 id="hexo-文章中图片引入问题"><a href="#hexo-文章中图片引入问题" class="headerlink" title="hexo 文章中图片引入问题"></a>hexo 文章中图片引入问题</h1><p>官方文档中提供的方法如下:</p>
+<p>文章资源文件夹 - 对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 config.yml 文件中的 post_asset_folder 选项设为 true 来打开。</p>
+<pre><code>_config.yml
+post_asset_folder: true
+</code></pre>
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 hexo new [layout] <title> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<p>但是这样的话，每创建一个文章就有一个对应的资源文件夹，有点乱，也不方便日后管理；</p>
+<p>所以这里选择将图片存入github仓库的方式，jsdelivr + github 实现cdn懒加载。</p>
+<p>首先创建一个GitHub仓库用来存图片；</p>
+<p>引用图片的链接为：<code>https://cdn.jsdelivr.net/gh/&lt;仓库名&gt;@&lt;版本号，可以写@latest,表示最新版本&gt;/&lt;仓库内相对路径&gt;/xxxx.png</code></p>
+<p>例如：</p>
+<p><code>https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/author.png</code></p>
 
   </article>
 
@@ -327,7 +339,7 @@ hexo new page &lt;title&gt; // 页面
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1618675053080"></script>
+<script src="/js/app.js?v=1618676186539"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
