@@ -1210,7 +1210,7 @@ body {
   z-index: 1000;
   height: 95vh;
   display: inline-block;
-  top: 0;
+  top: 3vh;
   overflow-y: auto;
 }
 .nexmoe-post-right .nexmoe-tool {
