@@ -24,7 +24,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_0pu9g34uux2d.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1618757482015">
+  <link rel="stylesheet" href="/css/style.css?v=1618757633777">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -224,68 +224,14 @@
 
             <div class="nexmoe-post-meta nexmoe-rainbow-fill">
                 <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月18日</a>
-                <a><i class="nexmoefont icon-areachart"></i>351 字</a>
+                <a><i class="nexmoefont icon-areachart"></i>353 字</a>
                 <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             </div>
 
             <article>
                 
-                            <h1 id="Leetcode-001-两数之和"><a href="#Leetcode-001-两数之和" class="headerlink" title="Leetcode-001-两数之和"></a>Leetcode-001-两数之和</h1><p>两种方法</p>
-<p>暴力枚举：</p>
-<pre><code class="java">class Solution &#123;
-    public int[] twoSum(int[] nums, int target) &#123;
-       int[] res = new int[2];
-        int a;
-        int b = 0;
-
-        for (int i = 0; i &lt; nums.length; i++) &#123;
-            a = nums[i];
-            for (int j = i+1; j &lt; nums.length; j++) &#123;
-                b = a + nums[j];
-                if (b == target) &#123;
-                    res[0] = i;
-                    res[1] = j;
-                    return res;
-                &#125;
-            &#125;
-        &#125;
-
-        return res;
-&#125;
-&#125;
-</code></pre>
-<pre><code class="java">执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
-内存消耗：38.5 MB, 在所有 Java 提交中击败了83.26%的用户
-</code></pre>
-<p>HashMap法：</p>
-<pre><code class="java">class Solution &#123;
-    public int[] twoSum(int[] nums, int target) &#123;
-        int[] res = new int[2];
-        //将nums用例放入hashmap
-        HashMap&lt;Integer, Integer&gt; hashMap = new HashMap&lt;&gt;();
-        for (int i = 0; i &lt; nums.length; i++) &#123;
-            hashMap.put(nums[i],i);
-        &#125;
-
-        for (int i = 0; i &lt; nums.length; i++) &#123;
-            // 直接找另一个数是否存在，第二个条件防止用例中出现重复数字的时候找到自己，导致结果出错
-            if (hashMap.containsKey(target-nums[i]) &amp;&amp; hashMap.get(target-nums[i])!=i)&#123;
-                res[0] = i;
-                res[1] = hashMap.get(target-nums[i]);
-                break;
-            &#125;
-        &#125;
-        return res;
-&#125;
-&#125;
-</code></pre>
-<pre><code class="java">执行用时：3 ms, 在所有 Java 提交中击败了22.79%的用户
-内存消耗：38 MB, 在所有 Java 提交中击败了99.96%的用户
-</code></pre>
-<p>可以看出，暴力法耗内存。而<code>hashmap</code>有遍历放入时的耗时，实际应用中直接放入<code>hashmap</code>可以不考虑此情况。</p>
-<p>问题：<code>hashmap.contains</code> 方法是否扫全部内容？</p>
-
-                                
+                    <h1 id="Leetcode-001-两数之和"><a href="#Leetcode-001-两数之和" class="headerlink" title="Leetcode-001-两数之和"></a>Leetcode-001-两数之和</h1>
+                        
             </article>
         </div>
         
@@ -312,7 +258,7 @@
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1618757482016"></script>
+<script src="/js/app.js?v=1618757633778"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
