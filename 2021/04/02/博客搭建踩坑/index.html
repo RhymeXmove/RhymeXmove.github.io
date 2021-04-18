@@ -20,7 +20,7 @@
 <meta property="og:description" content="blog搭建遇到的问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-01T17:20:13.000Z">
-<meta property="article:modified_time" content="2021-04-18T08:23:55.964Z">
+<meta property="article:modified_time" content="2021-04-18T08:48:26.381Z">
 <meta property="article:author" content="shanX">
 <meta property="article:tag" content="blog搭建">
 <meta name="twitter:card" content="summary">
@@ -29,7 +29,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_0pu9g34uux2d.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1618734267070">
+  <link rel="stylesheet" href="/css/style.css?v=1618735755273">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -213,7 +213,7 @@
             <div class="nexmoe-toc">
                 
                 
-                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#blog%E6%90%AD%E5%BB%BA%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">blog搭建遇到的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%98%E5%8F%A0%E6%96%87%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">折叠文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text">新建文章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E8%AE%BE%E7%BD%AEnew-post-name%E7%9A%84%E7%96%91%E9%97%AE"><span class="toc-number">3.1.</span> <span class="toc-text">hexo设置new_post_name的疑问</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-%E6%96%87%E7%AB%A0%E4%B8%AD%E5%9B%BE%E7%89%87%E5%BC%95%E5%85%A5%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">hexo 文章中图片引入问题</span></a></li></ol>
+                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#blog%E6%90%AD%E5%BB%BA%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">blog搭建遇到的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%98%E5%8F%A0%E6%96%87%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">折叠文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text">新建文章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E8%AE%BE%E7%BD%AEnew-post-name%E7%9A%84%E7%96%91%E9%97%AE"><span class="toc-number">3.1.</span> <span class="toc-text">hexo设置new_post_name的疑问</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-%E6%96%87%E7%AB%A0%E4%B8%AD%E5%9B%BE%E7%89%87%E5%BC%95%E5%85%A5%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">hexo 文章中图片引入问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-%E5%85%B3%E9%94%AE%E5%AD%97%E5%BC%95%E8%B5%B7%E7%9A%84%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">hexo 关键字引起的渲染问题</span></a></li></ol>
                 
             </div>
         </div>
@@ -231,7 +231,7 @@
     
     <div class="nexmoe-post-meta nexmoe-rainbow-fill" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月02日</a>
-    <a><i class="nexmoefont icon-areachart"></i>546 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>589 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
 </div>
 
@@ -264,13 +264,14 @@ hexo new page &lt;title&gt; // 页面
 <pre><code class="powershell">_config.yml
 post_asset_folder: true
 </code></pre>
-<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 hexo new [layout] <title> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt; </code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
 <p>但是这样的话，每创建一个文章就有一个对应的资源文件夹，有点乱，也不方便日后管理；</p>
 <p>所以这里选择将图片存入github仓库的方式，jsdelivr + github 实现cdn懒加载。</p>
 <p>首先创建一个GitHub仓库用来存图片；</p>
 <p>引用图片的链接为：<code>https://cdn.jsdelivr.net/gh/&lt;仓库名&gt;@&lt;版本号，可以写@latest,表示最新版本&gt;/&lt;仓库内相对路径&gt;/xxxx.png</code></p>
 <p>例如：</p>
 <p><code>https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/author.png</code></p>
+<h1 id="hexo-关键字引起的渲染问题"><a href="#hexo-关键字引起的渲染问题" class="headerlink" title="hexo 关键字引起的渲染问题"></a><code>hexo</code> 关键字引起的渲染问题</h1><p>编写<code>markdown</code>文件时，<code>hexo</code> 关键字务必用反引号包裹，否则会引起页面渲染问题。</p>
 
   </article>
 
@@ -307,8 +308,8 @@ post_asset_folder: true
         clientSecret: '9c79e44494cd9fae312629457ae9b534e01a963e',
         id: window.location.pathname,
         repo: 'hexo-gittalkCommon',
-        owner: 'rhymexmove',
-        admin: 'rhymexmove'
+        owner: 'RhymeXmove',
+        admin: 'RhymeXmove'
     })
     gitalk.render('gitalk')
 </script>
@@ -336,7 +337,7 @@ post_asset_folder: true
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1618734267073"></script>
+<script src="/js/app.js?v=1618735755274"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
