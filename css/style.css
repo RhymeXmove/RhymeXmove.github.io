@@ -1203,7 +1203,7 @@ body {
   -webkit-align-items: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  height: 100%;
+/* height: 100%; */
 }
 .nexmoe-post-right .nexmoe-fixed {
   position: fixed;
