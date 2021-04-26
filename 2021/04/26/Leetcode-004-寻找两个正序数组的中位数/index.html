@@ -8,7 +8,7 @@ zh-CN"
             
                 <title>
                     
-                        文章归档 -
+                        Leetcode-004-寻找两个正序数组的中位数 -
                             
                                 shanX&#39;s Blog
                 </title>
@@ -19,12 +19,17 @@ zh-CN"
                     
 
                         <link rel="shortcut icon" href="/image/author.png" type="image/png" />
-                        <meta property="og:type" content="website">
-<meta property="og:title" content="shanX&#39;s Blog">
-<meta property="og:url" content="https://rhymexmove.github.io/archives/page/2/index.html">
+                        <meta name="description" content="寻找两个正序数组的中位数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode-004-寻找两个正序数组的中位数">
+<meta property="og:url" content="https://rhymexmove.github.io/2021/04/26/Leetcode-004-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/index.html">
 <meta property="og:site_name" content="shanX&#39;s Blog">
+<meta property="og:description" content="寻找两个正序数组的中位数">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-26T12:18:05.000Z">
+<meta property="article:modified_time" content="2021-04-26T14:00:02.357Z">
 <meta property="article:author" content="shanX">
+<meta property="article:tag" content="Leetcode">
 <meta name="twitter:card" content="summary">
                             <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233"
                                 crossorigin>
@@ -40,7 +45,7 @@ zh-CN"
                             
                                 <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_0pu9g34uux2d.css">
                                 
-                                    <link rel="stylesheet" href="/css/style.css?v=1619445868405">
+                                    <link rel="stylesheet" href="/css/style.css?v=1619445868377">
         <meta name="generator" content="Hexo 5.4.0"></head>
 
         <body class="mdui-drawer-body-left">
@@ -224,114 +229,125 @@ zh-CN"
                 </div>
                 <div id="nexmoe-content">
                     <div class="nexmoe-primary">
-                        <section class="nexmoe-posts">
+                        <div class="nexmoe-post">
+
+  <div class="nexmoe-post-right">
     
-        <div class="nexmoe-post">
-            <a href="/2021/04/06/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
                 
-                        <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 50%;">
-                            <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="JAVA-常用类" class="lazyload">
-                            <h1>
-                                JAVA-常用类
-                            </h1>
-                        </div>
-                        
-            </a>
-
-            <div class="nexmoe-post-meta nexmoe-rainbow-fill">
-                <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月06日</a>
-                <a><i class="nexmoefont icon-areachart"></i>4.6k 字</a>
-                <a><i class="nexmoefont icon-time-circle-fill"></i>大概 23 分钟</a>
+                
+                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">寻找两个正序数组的中位数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%86%E6%98%AF"><span class="toc-number">1.1.</span> <span class="toc-text">但是</span></a></li></ol></li></ol>
+                
             </div>
-
-            <article>
-                
-                    <h1 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h1>
-                        
-            </article>
         </div>
-        
-        <div class="nexmoe-post">
-            <a href="/2021/04/04/JAVA-%E5%9F%BA%E7%A1%80/">
-                
-                        <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 50%;">
-                            <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="JAVA-基础" class="lazyload">
-                            <h1>
-                                JAVA-基础
-                            </h1>
-                        </div>
-                        
-            </a>
+      </div>
+    
+  </div>
 
-            <div class="nexmoe-post-meta nexmoe-rainbow-fill">
-                <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月04日</a>
-                <a><i class="nexmoefont icon-areachart"></i>2.8k 字</a>
-                <a><i class="nexmoefont icon-time-circle-fill"></i>大概 12 分钟</a>
-            </div>
-
-            <article>
-                
-                    <p>视频地址：<a target="_blank" rel="noopener" href="https://www.kuangstudy.com/">https://www.kuangstudy.com/</a></p>
-                        
-            </article>
+  <article>
+    
+        <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+            <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/cover/leetcode.png" data-sizes="auto" alt="Leetcode-004-寻找两个正序数组的中位数" class="lazyload">
+            <h1>Leetcode-004-寻找两个正序数组的中位数</h1>
         </div>
-        
-        <div class="nexmoe-post">
-            <a href="/2021/04/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E5%9D%91/">
-                
-                    <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: NaN%;">
-                        <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/cover/fw658.gif" data-sizes="auto" alt="博客搭建踩坑" class="lazyload">
-                        <h1>
-                            博客搭建踩坑
-                        </h1>
-                    </div>
-                    
-            </a>
+    
+    
+    <div class="nexmoe-post-meta nexmoe-rainbow-fill" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月26日</a>
+    <a><i class="nexmoefont icon-areachart"></i>197 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
 
-            <div class="nexmoe-post-meta nexmoe-rainbow-fill">
-                <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月02日</a>
-                <a><i class="nexmoefont icon-areachart"></i>589 字</a>
-                <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            </div>
+    <h1 id="寻找两个正序数组的中位数"><a href="#寻找两个正序数组的中位数" class="headerlink" title="寻找两个正序数组的中位数"></a>寻找两个正序数组的中位数</h1><span id="more"></span>
 
-            <article>
-                
-                    <h1 id="blog搭建遇到的问题"><a href="#blog搭建遇到的问题" class="headerlink" title="blog搭建遇到的问题"></a>blog搭建遇到的问题</h1>
-                        
-            </article>
-        </div>
-        
-        <div class="nexmoe-post">
-            <a href="/2021/04/01/hello-world/">
-                
-                        <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 50%;">
-                            <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
-                            <h1>
-                                Hello World
-                            </h1>
-                        </div>
-                        
-            </a>
+<p>最朴实的方法，数组合并用sort排序，然后找出中位数：</p>
+<pre><code class="java">import java.util.ArrayList;
+import java.util.Collections;
 
-            <div class="nexmoe-post-meta nexmoe-rainbow-fill">
-                <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月01日</a>
-                <a><i class="nexmoefont icon-areachart"></i>77 字</a>
-                <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-            </div>
+public class FindMedianSortedArrays &#123;
+    public static void main(String[] args) &#123;
+        int[] arr1 = new int[]&#123;&#125;;
+        int[] arr2 = new int[]&#123;&#125;;
 
-            <article>
-                
-                    <p>Hello World~</p>
-                        
-            </article>
-        </div>
-        
-</section>
+        float res = findMedianSortedArrays(arr1,arr2);
+        System.out.println(&quot;中位数为&quot;+res);
+    &#125;
 
-    <nav class="nexmoe-page-nav">
-      <a class="extend prev" rel="prev" href="/archives/"><i class="nexmoefont icon-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+    public static float findMedianSortedArrays(int[] nums1, int[] nums2) &#123;
+        ArrayList&lt;Integer&gt; arr = new ArrayList&lt;&gt;();
+        for (int i : nums1) &#123;
+            arr.add(i);
+        &#125;
+        for (int i : nums2) &#123;
+            arr.add(i);
+        &#125;
+        Collections.sort(arr);
+
+        float res = 0;
+        int length = arr.size();
+        int mid;
+        if (length==0)&#123;
+            return 0;
+        &#125;else if (length%2==1)&#123;
+            mid = arr.size()/2;
+            res = arr.get(mid);
+        &#125;else &#123;
+            mid = arr.size()/2;
+            res = arr.get(mid) + arr.get(mid-1);
+            res = res/2;
+        &#125;
+        return res;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="但是"><a href="#但是" class="headerlink" title="但是"></a>但是</h2><p>要求时间复杂度为 <code>O(log (m+n))</code> </p>
+<p>所以需要使用——归并排序法</p>
+
+  </article>
+
   
+    
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>shanX<br>
+    <strong>本文链接：</strong><a href="https://rhymexmove.github.io/2021/04/26/Leetcode-004-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" title="https:&#x2F;&#x2F;rhymexmove.github.io&#x2F;2021&#x2F;04&#x2F;26&#x2F;Leetcode-004-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;rhymexmove.github.io&#x2F;2021&#x2F;04&#x2F;26&#x2F;Leetcode-004-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/Leetcode/">Leetcode</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Leetcode/" rel="tag">Leetcode</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: 'a2d666d91d6af126f538',
+        clientSecret: '9c79e44494cd9fae312629457ae9b534e01a963e',
+        id: window.location.pathname,
+        repo: 'hexo-gittalkCommon',
+        owner: 'RhymeXmove',
+        admin: 'RhymeXmove'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
                             <div class="nexmoe-post-right">
                                 <div class="nexmoe-fixed">
                                     <div class="nexmoe-tool">
@@ -353,7 +369,7 @@ zh-CN"
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1619445868407"></script>
+<script src="/js/app.js?v=1619445868378"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
