@@ -27,7 +27,7 @@ zh-CN"
 <meta property="og:description" content="JVM探究">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/20190216114129109.png">
-<meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/20201217213314510.png">
+<meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/20191108105314115.png">
 <meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/2020121722082798.png">
 <meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/shaxiang1.png">
 <meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/shaxiang2.png">
@@ -39,7 +39,7 @@ zh-CN"
 <meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/20210426184359.png">
 <meta property="og:image" content="https://rhymexmove.github.io/2021/04/26/JAVA-JVM%E5%9F%BA%E7%A1%80/image/article/20210426184621.png">
 <meta property="article:published_time" content="2021-04-26T14:00:37.000Z">
-<meta property="article:modified_time" content="2021-04-26T14:03:49.381Z">
+<meta property="article:modified_time" content="2021-04-26T14:11:51.813Z">
 <meta property="article:author" content="shanX">
 <meta property="article:tag" content="java基础">
 <meta property="article:tag" content="狂神说">
@@ -59,7 +59,7 @@ zh-CN"
                             
                                 <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_0pu9g34uux2d.css">
                                 
-                                    <link rel="stylesheet" href="/css/style.css?v=1619445868374">
+                                    <link rel="stylesheet" href="/css/style.css?v=1619446317762">
         <meta name="generator" content="Hexo 5.4.0"></head>
 
         <body class="mdui-drawer-body-left">
@@ -368,7 +368,7 @@ protected Class&lt;?&gt; loadClass(String name, boolean resolve)
 &#125;
 </code></pre>
 <p>其实这段代码已经很好的解释了双亲委派机制，为了大家更容易理解，我做了一张图来描述一下上面这段代码的流程：  </p>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/article/20201217213314510.png" alt="20201217213314510" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/RhymeXmove.github.io@latest/image/article/20191108105314115.png" alt="20201217213314510" class="lazyload"></p>
 <p>从上图中我们就更容易理解了，当一个Hello.class这样的文件要被加载时。不考虑我们自定义类加载器，首先会在AppClassLoader中检查是否加载过，如果有那就无需再加载了。如果没有，那么会拿到父加载器，然后调用父加载器的loadClass方法。父类中同理也会先检查自己是否已经加载过，如果没有再往上。注意这个类似递归的过程，直到到达Bootstrap classLoader之前，都是在检查是否加载过，并不会选择自己去加载。直到BootstrapClassLoader，已经没有父加载器了，这时候开始考虑自己是否能加载了，如果自己无法加载，会下沉到子加载器去加载，一直到最底层，如果没有任何加载器能加载，就会抛出ClassNotFoundException。那么有人就有下面这种疑问了？</p>
 <p>为什么要设计这种机制<br>这种设计有个好处是，如果有人想替换系统级别的类：String.java。篡改它的实现，在这种机制下这些系统的类已经被Bootstrap classLoader加载过了（为什么？因为当一个类需要加载的时候，最先去尝试加载的就是BootstrapClassLoader），所以其他类加载器并没有机会再去加载，从一定程度上防止了危险代码的植入。</p>
 <p>总结了一张脑图如下：</p>
@@ -595,7 +595,7 @@ protected Class&lt;?&gt; loadClass(String name, boolean resolve)
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1619445868376"></script>
+<script src="/js/app.js?v=1619446317764"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
