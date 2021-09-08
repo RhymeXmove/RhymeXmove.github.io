@@ -8,7 +8,7 @@ zh-CN"
             
                 <title>
                     
-                        『批处理』批量删除文本文件前n行 -
+                        标签：资源 -
                             
                                 shanX&#39;s Blog
                 </title>
@@ -19,17 +19,12 @@ zh-CN"
                     
 
                         <link rel="shortcut icon" href="/image/author.png" type="image/png" />
-                        <meta name="description" content="&#x3D;&#x3D;&#x3D;&#x3D;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="『批处理』批量删除文本文件前n行">
-<meta property="og:url" content="https://rhymexmove.github.io/2021/08/08/%E3%80%8E%E6%89%B9%E5%A4%84%E7%90%86%E3%80%8F%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%89%8Dn%E8%A1%8C/index.html">
+                        <meta property="og:type" content="website">
+<meta property="og:title" content="shanX&#39;s Blog">
+<meta property="og:url" content="https://rhymexmove.github.io/tags/%E8%B5%84%E6%BA%90/index.html">
 <meta property="og:site_name" content="shanX&#39;s Blog">
-<meta property="og:description" content="&#x3D;&#x3D;&#x3D;&#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-08T08:45:48.000Z">
-<meta property="article:modified_time" content="2021-08-08T08:50:07.663Z">
 <meta property="article:author" content="shanX">
-<meta property="article:tag" content="批处理工具">
 <meta name="twitter:card" content="summary">
                             <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233"
                                 crossorigin>
@@ -45,7 +40,7 @@ zh-CN"
                             
                                 <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_fmjyoao96km.css">
                                 
-                                    <link rel="stylesheet" href="/css/style.css?v=1631088646542">
+                                    <link rel="stylesheet" href="/css/style.css?v=1631088647173">
         <meta name="generator" content="Hexo 5.4.0"></head>
 
         <body class="mdui-drawer-body-left">
@@ -279,96 +274,35 @@ zh-CN"
                 </div>
                 <div id="nexmoe-content">
                     <div class="nexmoe-primary">
-                        <div class="nexmoe-post">
-
-  <div class="nexmoe-post-right">
+                        <section class="nexmoe-posts">
     
-      <div class="nexmoe-fixed">
-        <div class="nexmoe-valign">
-            <div class="nexmoe-toc">
+        <div class="nexmoe-post">
+            <a href="/2021/09/08/%E4%B8%AD%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9D%90%E6%A0%87-%E5%8C%85%E5%90%AB%E5%B8%82%E8%BE%96%E5%8C%BA/">
                 
-                
+                        <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 50%;">
+                            <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="中国城市坐标(包含市辖区)" class="lazyload">
+                            <h1>
+                                中国城市坐标(包含市辖区)
+                            </h1>
+                        </div>
+                        
+            </a>
+
+            <div class="nexmoe-post-meta nexmoe-rainbow-fill">
+                <a><i class="nexmoefont icon-calendar-fill"></i>2021年09月08日</a>
+                <a><i class="nexmoefont icon-areachart"></i>52.1k 字</a>
+                <a><i class="nexmoefont icon-time-circle-fill"></i>大概 252 分钟</a>
             </div>
+
+            <article>
+                
+                    <p>================</p>
+                        
+            </article>
         </div>
-      </div>
-    
-  </div>
-
-  <article>
-    
-        <div class="nexmoe-post-cover" style="padding-bottom: 50%;"> 
-            <img data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="『批处理』批量删除文本文件前n行" class="lazyload">
-            <h1>『批处理』批量删除文本文件前n行</h1>
-        </div>
-    
-    
-    <div class="nexmoe-post-meta nexmoe-rainbow-fill" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2021年08月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>192 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-</div>
-
-    <p>====</p>
-<span id="more"></span>
-
-<p><strong>使用方法</strong>：新建文本文档，复制下方代码，保存，修改后缀为**.bat**，双击即可执行。</p>
-<pre><code class="vbnet">@ECHO OFF
-SET TxtDir=&quot;%~dp0&quot;
-SET /A N=6
-ECHO 删除行操作开始，请耐心等待。
-ECHO 正在执行，请勿关闭本窗口。
-ECHO ...
-CD /D %TxtDir%
-FOR /F &quot;tokens=1 delims=&quot; %%I IN (&#39;DIR /A /B *.txt&#39;) DO ((MORE +%N% &quot;%%I&quot;&gt;&quot;%%I_&quot;)&amp;(DEL /A /F /Q &quot;%%I&quot;)&amp;(REN &quot;%%I_&quot; &quot;%%I&quot;))
-ECHO 执行任务结束。
-PAUSE
-</code></pre>
-<p><strong>可以修改的部分：</strong></p>
-<p>第二行，可以通过修改更改操作目录(替换<code>%~dp0</code>)，不修改则为批处理文件当前目录。</p>
-<p>第三行，可以通过修改<code>N= </code>修改删除行数。</p>
-<p>第八行，可以通过修改<code>*.txt</code>修改操作文件格式</p>
-
-  </article>
-
-  
-    
-  <div class="nexmoe-post-copyright">
-    <strong>本文作者：</strong>shanX<br>
-    <strong>本文链接：</strong><a href="https://rhymexmove.github.io/2021/08/08/%E3%80%8E%E6%89%B9%E5%A4%84%E7%90%86%E3%80%8F%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%89%8Dn%E8%A1%8C/" title="https:&#x2F;&#x2F;rhymexmove.github.io&#x2F;2021&#x2F;08&#x2F;08&#x2F;%E3%80%8E%E6%89%B9%E5%A4%84%E7%90%86%E3%80%8F%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%89%8Dn%E8%A1%8C&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;rhymexmove.github.io&#x2F;2021&#x2F;08&#x2F;08&#x2F;%E3%80%8E%E6%89%B9%E5%A4%84%E7%90%86%E3%80%8F%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%89%8Dn%E8%A1%8C&#x2F;</a><br>
-    
-      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-    
-  </div>
-
-
-  
-  
-  <div class="nexmoe-post-meta nexmoe-rainbow">
-    
-    
-        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/" rel="tag">批处理工具</a>
-    
-</div>
-
-  <div class="nexmoe-post-footer">
-    <section class="nexmoe-comment">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
-<div id="gitalk"></div>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: 'a2d666d91d6af126f538',
-        clientSecret: '9c79e44494cd9fae312629457ae9b534e01a963e',
-        id: window.location.pathname,
-        repo: 'hexo-gittalkCommon',
-        owner: 'RhymeXmove',
-        admin: 'RhymeXmove'
-    })
-    gitalk.render('gitalk')
-</script>
+        
 </section>
-  </div>
-</div>
+
                             <div class="nexmoe-post-right">
                                 <div class="nexmoe-fixed">
                                     <div class="nexmoe-tool">
@@ -390,7 +324,7 @@ PAUSE
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1631088646545"></script>
+<script src="/js/app.js?v=1631088647174"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
