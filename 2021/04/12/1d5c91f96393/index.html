@@ -26,15 +26,15 @@ zh-CN"
 <meta property="og:site_name" content="shanX&#39;s Blog">
 <meta property="og:description" content="线程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://rhymexmove.github.io/2021/04/12/1d5c91f96393/image/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183018803.png">
-<meta property="og:image" content="https://rhymexmove.github.io/2021/04/12/1d5c91f96393/image/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183039107.png">
+<meta property="og:image" content="https://rhymexmove.github.io/2021/04/12/1d5c91f96393/img/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183018803.png">
+<meta property="og:image" content="https://rhymexmove.github.io/2021/04/12/1d5c91f96393/img/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183039107.png">
 <meta property="article:published_time" content="2021-04-11T16:02:31.000Z">
-<meta property="article:modified_time" content="2022-04-07T17:25:27.696Z">
+<meta property="article:modified_time" content="2022-06-14T04:09:00.349Z">
 <meta property="article:author" content="shanX">
 <meta property="article:tag" content="java基础">
 <meta property="article:tag" content="狂神说">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://rhymexmove.github.io/2021/04/12/1d5c91f96393/image/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183018803.png">
+<meta name="twitter:image" content="https://rhymexmove.github.io/2021/04/12/1d5c91f96393/img/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183018803.png">
                             <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233"
                                 crossorigin>
                             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
@@ -49,7 +49,7 @@ zh-CN"
                             
                                 <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_fmjyoao96km.css">
                                 
-                                    <link rel="stylesheet" href="/css/style.css?v=1650892957185">
+                                    <link rel="stylesheet" href="/css/style.css?v=1655179985791">
         <meta name="generator" content="Hexo 5.4.0"></head>
 
         <body class="mdui-drawer-body-left">
@@ -301,7 +301,7 @@ zh-CN"
             <div class="nexmoe-toc">
                 
                 
-                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">线程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">线程创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thread"><span class="toc-number">1.2.</span> <span class="toc-text">Thread</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87-commons-io"><span class="toc-number">1.2.1.</span> <span class="toc-text">实现多线程同步下载图片(commons-io)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0Runable%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.</span> <span class="toc-text">实现Runable接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Runable-%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87-commons-io"><span class="toc-number">1.3.1.</span> <span class="toc-text">Runable-实现多线程同步下载图片(commons-io)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thread-%E4%B8%8E-Runable%E6%AF%94%E8%BE%83"><span class="toc-number">1.4.</span> <span class="toc-text">Thread 与 Runable比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E7%81%AB%E8%BD%A6%E7%A5%A8%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">1.5.</span> <span class="toc-text">买火车票的例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%BE%9F%E5%85%94%E8%B5%9B%E8%B7%91"><span class="toc-number">1.6.</span> <span class="toc-text">模拟龟兔赛跑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0Callable%E6%8E%A5%E5%8F%A3%EF%BC%88%E4%BB%85%E4%BA%86%E8%A7%A3%EF%BC%89-%E6%89%A9%E5%85%85"><span class="toc-number">1.7.</span> <span class="toc-text">实现Callable接口（仅了解） 扩充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E2%80%93%E4%B8%AA%E4%BA%BA%E7%BB%93%E5%A9%9A%E4%B8%8E%E5%A9%9A%E5%BA%86%E5%85%AC%E5%8F%B8%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">1.8.</span> <span class="toc-text">静态代理–个人结婚与婚庆公司的例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.9.</span> <span class="toc-text">Lambda表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-number">1.10.</span> <span class="toc-text">线程状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9C%E6%AD%A2%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.10.1.</span> <span class="toc-text">停止线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%91%E7%9C%A0"><span class="toc-number">1.10.2.</span> <span class="toc-text">线程休眠</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9"><span class="toc-number">1.10.3.</span> <span class="toc-text">线程礼让</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.10.4.</span> <span class="toc-text">合并线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%A7%82%E6%B5%8B"><span class="toc-number">1.10.5.</span> <span class="toc-text">线程状态观测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">1.10.6.</span> <span class="toc-text">多线程优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%88%E6%8A%A4%EF%BC%88daemon%EF%BC%89%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.10.7.</span> <span class="toc-text">守护（daemon）线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-number">1.11.</span> <span class="toc-text">线程同步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E4%B8%8D%E5%AE%89%E5%85%A8%E6%A1%88%E4%BE%8B"><span class="toc-number">1.11.1.</span> <span class="toc-text">三个不安全案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E4%B9%B0%E7%A5%A8"><span class="toc-number">1.11.1.1.</span> <span class="toc-text">不安全买票</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E5%8F%96%E9%92%B1"><span class="toc-number">1.11.1.2.</span> <span class="toc-text">不安全取钱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E9%9B%86%E5%90%88"><span class="toc-number">1.11.1.3.</span> <span class="toc-text">不安全集合</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95-synchronized"><span class="toc-number">1.12.</span> <span class="toc-text">同步方法 - synchronized</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JUC%E5%AE%89%E5%85%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%9B%86%E5%90%88-CopyOnWriteArrayList"><span class="toc-number">1.13.</span> <span class="toc-text">JUC安全类型的集合-CopyOnWriteArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%BB%E9%94%81"><span class="toc-number">1.14.</span> <span class="toc-text">死锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lock-%E9%94%81-%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="toc-number">1.15.</span> <span class="toc-text">Lock 锁 - 可重入锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#synchronized-%E4%B8%8E-lock%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">1.16.</span> <span class="toc-text">synchronized 与 lock的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%8D%8F%E4%BD%9C-%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="toc-number">1.17.</span> <span class="toc-text">线程协作 - 生产者消费者问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%A8%8B%E6%B3%95"><span class="toc-number">1.17.1.</span> <span class="toc-text">管程法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E7%81%AF%E6%B3%95"><span class="toc-number">1.17.2.</span> <span class="toc-text">信号灯法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">1.18.</span> <span class="toc-text">线程池</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">1.19.</span> <span class="toc-text">使用线程池</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.20.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+                  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">线程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">线程创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thread"><span class="toc-number">1.2.</span> <span class="toc-text">Thread</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87-commons-io"><span class="toc-number">1.2.1.</span> <span class="toc-text">实现多线程同步下载图片(commons-io)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-Runable-%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.</span> <span class="toc-text">实现 Runable 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Runable-%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87-commons-io"><span class="toc-number">1.3.1.</span> <span class="toc-text">Runable-实现多线程同步下载图片(commons-io)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thread-%E4%B8%8E-Runable-%E6%AF%94%E8%BE%83"><span class="toc-number">1.4.</span> <span class="toc-text">Thread 与 Runable 比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E7%81%AB%E8%BD%A6%E7%A5%A8%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">1.5.</span> <span class="toc-text">买火车票的例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%BE%9F%E5%85%94%E8%B5%9B%E8%B7%91"><span class="toc-number">1.6.</span> <span class="toc-text">模拟龟兔赛跑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-Callable-%E6%8E%A5%E5%8F%A3%EF%BC%88%E4%BB%85%E4%BA%86%E8%A7%A3%EF%BC%89-%E6%89%A9%E5%85%85"><span class="toc-number">1.7.</span> <span class="toc-text">实现 Callable 接口（仅了解） 扩充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E2%80%93%E4%B8%AA%E4%BA%BA%E7%BB%93%E5%A9%9A%E4%B8%8E%E5%A9%9A%E5%BA%86%E5%85%AC%E5%8F%B8%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">1.8.</span> <span class="toc-text">静态代理–个人结婚与婚庆公司的例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.9.</span> <span class="toc-text">Lambda 表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-number">1.10.</span> <span class="toc-text">线程状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9C%E6%AD%A2%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.10.1.</span> <span class="toc-text">停止线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%91%E7%9C%A0"><span class="toc-number">1.10.2.</span> <span class="toc-text">线程休眠</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9"><span class="toc-number">1.10.3.</span> <span class="toc-text">线程礼让</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.10.4.</span> <span class="toc-text">合并线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%A7%82%E6%B5%8B"><span class="toc-number">1.10.5.</span> <span class="toc-text">线程状态观测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">1.10.6.</span> <span class="toc-text">多线程优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%88%E6%8A%A4%EF%BC%88daemon%EF%BC%89%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.10.7.</span> <span class="toc-text">守护（daemon）线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-number">1.11.</span> <span class="toc-text">线程同步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E4%B8%8D%E5%AE%89%E5%85%A8%E6%A1%88%E4%BE%8B"><span class="toc-number">1.11.1.</span> <span class="toc-text">三个不安全案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E4%B9%B0%E7%A5%A8"><span class="toc-number">1.11.1.1.</span> <span class="toc-text">不安全买票</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E5%8F%96%E9%92%B1"><span class="toc-number">1.11.1.2.</span> <span class="toc-text">不安全取钱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E9%9B%86%E5%90%88"><span class="toc-number">1.11.1.3.</span> <span class="toc-text">不安全集合</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95-synchronized"><span class="toc-number">1.12.</span> <span class="toc-text">同步方法 - synchronized</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JUC-%E5%AE%89%E5%85%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%9B%86%E5%90%88-CopyOnWriteArrayList"><span class="toc-number">1.13.</span> <span class="toc-text">JUC 安全类型的集合-CopyOnWriteArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%BB%E9%94%81"><span class="toc-number">1.14.</span> <span class="toc-text">死锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lock-%E9%94%81-%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="toc-number">1.15.</span> <span class="toc-text">Lock 锁 - 可重入锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#synchronized-%E4%B8%8E-lock-%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">1.16.</span> <span class="toc-text">synchronized 与 lock 的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%8D%8F%E4%BD%9C-%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="toc-number">1.17.</span> <span class="toc-text">线程协作 - 生产者消费者问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%A8%8B%E6%B3%95"><span class="toc-number">1.17.1.</span> <span class="toc-text">管程法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E7%81%AF%E6%B3%95"><span class="toc-number">1.17.2.</span> <span class="toc-text">信号灯法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">1.18.</span> <span class="toc-text">线程池</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">1.19.</span> <span class="toc-text">使用线程池</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.20.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
                 
             </div>
         </div>
@@ -326,11 +326,11 @@ zh-CN"
     <h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><span id="more"></span>
 
 <h2 id="线程创建"><a href="#线程创建" class="headerlink" title="线程创建"></a>线程创建</h2><p>Thread、Runnable、Callable</p>
-<p><strong>继承Thread类</strong>和 <strong>实现Runnable接口</strong> 为重点，实现Callable接口仅作了解</p>
+<p><strong>继承 Thread 类</strong>和 <strong>实现 Runnable 接口</strong> 为重点，实现 Callable 接口仅作了解</p>
 <h2 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h2><ol>
-<li>自定义线程类继承Thread类</li>
-<li>重写run()方法，编写线程执行体</li>
-<li>创建线程对象，调用start()方法启动线程</li>
+<li>自定义线程类继承 Thread 类</li>
+<li>重写 run()方法，编写线程执行体</li>
+<li>创建线程对象，调用 start()方法启动线程</li>
 </ol>
 <pre><code class="java">// 创建线程的方式：继承Thread类 、重写run（）方法、 调用start开启线程
 
@@ -402,10 +402,10 @@ class WebDownLoader &#123;
     &#125;
 &#125;
 </code></pre>
-<h2 id="实现Runable接口"><a href="#实现Runable接口" class="headerlink" title="实现Runable接口"></a>实现Runable接口</h2><ol>
-<li>定义MyRunnable类实现Runnable接口</li>
-<li>实现run()方法，编写线程执行体</li>
-<li>创建线程对象，调用start()方法启动线程</li>
+<h2 id="实现-Runable-接口"><a href="#实现-Runable-接口" class="headerlink" title="实现 Runable 接口"></a>实现 Runable 接口</h2><ol>
+<li>定义 MyRunnable 类实现 Runnable 接口</li>
+<li>实现 run()方法，编写线程执行体</li>
+<li>创建线程对象，调用 start()方法启动线程</li>
 </ol>
 <pre><code class="java">public class TestRunable01 implements Runnable &#123;
     //run方法线程体
@@ -487,23 +487,23 @@ class WebDownLoader2 &#123;
     &#125;
 &#125;
 </code></pre>
-<h2 id="Thread-与-Runable比较"><a href="#Thread-与-Runable比较" class="headerlink" title="Thread 与 Runable比较"></a>Thread 与 Runable比较</h2><table>
+<h2 id="Thread-与-Runable-比较"><a href="#Thread-与-Runable-比较" class="headerlink" title="Thread 与 Runable 比较"></a>Thread 与 Runable 比较</h2><table>
 <thead>
 <tr>
-<th align="center">继承Thread类</th>
-<th align="center">实现Runnable接口</th>
+<th align="center">继承 Thread 类</th>
+<th align="center">实现 Runnable 接口</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">子类继承Thread类具备多线程能力</td>
-<td align="center">实现接口Runnable具有多线程能力</td>
+<td align="center">子类继承 Thread 类具备多线程能力</td>
+<td align="center">实现接口 Runnable 具有多线程能力</td>
 </tr>
 <tr>
 <td align="center">启动线程：子类对象.start();</td>
-<td align="center">启动线程：传入目标对象+Thread对象.start();</td>
+<td align="center">启动线程：传入目标对象+Thread 对象.start();</td>
 </tr>
 <tr>
-<td align="center">不建议使用：避免OOP单继承局限性</td>
+<td align="center">不建议使用：避免 OOP 单继承局限性</td>
 <td align="center">推荐使用：避免单继承局限性，灵活方便，方便同一个对象被多个线程使用</td>
 </tr>
 </tbody></table>
@@ -614,11 +614,11 @@ public class Race implements Runnable &#123;
     &#125;
 &#125;
 </code></pre>
-<h2 id="实现Callable接口（仅了解）-扩充"><a href="#实现Callable接口（仅了解）-扩充" class="headerlink" title="实现Callable接口（仅了解） 扩充"></a>实现Callable接口（仅了解） 扩充</h2><ol>
-<li>实现Callable接口，需要返回值类型</li>
-<li>重写call方法，需要抛出异常</li>
+<h2 id="实现-Callable-接口（仅了解）-扩充"><a href="#实现-Callable-接口（仅了解）-扩充" class="headerlink" title="实现 Callable 接口（仅了解） 扩充"></a>实现 Callable 接口（仅了解） 扩充</h2><ol>
+<li>实现 Callable 接口，需要返回值类型</li>
+<li>重写 call 方法，需要抛出异常</li>
 <li>创建目标对象</li>
-<li>（1）创建执行服务 <code>ExecutorService ser=Executors.newFixedThreadPool(3);</code>  //线程池，并发数</li>
+<li>（1）创建执行服务 <code>ExecutorService ser=Executors.newFixedThreadPool(3);</code> //线程池，并发数</li>
 <li>（2）提交执行 <code>Future&lt;Boolean&gt; result = ser.submit(t1);</code></li>
 <li>（3）获取结果 <code>boolean r1 = result.get();</code></li>
 <li>（4）关闭服务 <code>ser.shutdownNow();</code></li>
@@ -736,7 +736,7 @@ class WeddingCompany implements Marry &#123;
     &#125;
 &#125;
 </code></pre>
-<h2 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h2><p>为什么要使用lambda表达式</p>
+<h2 id="Lambda-表达式"><a href="#Lambda-表达式" class="headerlink" title="Lambda 表达式"></a>Lambda 表达式</h2><p>为什么要使用 lambda 表达式</p>
 <ol>
 <li><p>避免匿名内部类定义过多</p>
 </li>
@@ -746,16 +746,16 @@ class WeddingCompany implements Marry &#123;
 <p>注：只有一行代码的情况下才能简化成一行；前提是接口为函数式接口</p>
 </li>
 </ol>
-<p>理解函数式接口（Functional Interface）是学习java8 lambda表达式的关键所在</p>
+<p>理解函数式接口（Functional Interface）是学习 java8 lambda 表达式的关键所在</p>
 <p>函数式接口的定义：</p>
 <p>任何接口，如果只包含一个抽象方法，那么他就是一个函数式接口。</p>
-<p>eg: </p>
+<p>eg:</p>
 <pre><code class="java">public interface Runable &#123;
     public abstract void run();
 &#125;
 </code></pre>
-<p>对于函数式接口，我们可以通过Lambda表达式来创建该接口的对象。</p>
-<p>简化至lambda的步骤如下：</p>
+<p>对于函数式接口，我们可以通过 Lambda 表达式来创建该接口的对象。</p>
+<p>简化至 lambda 的步骤如下：</p>
 <pre><code class="java">//外部类，接口
 public class TestLove &#123;
     public static void main(String[] args) &#123;
@@ -802,7 +802,7 @@ interface ILove &#123; void love(String a);&#125;
                 System.out.println(&quot;I love --&quot; + a);
             &#125;
         &#125;
-        
+
         ILove iLove = new Love();
         iLove.love(&quot;zzz&quot;);
 
@@ -816,7 +816,7 @@ interface ILove &#123; void love(String a);&#125;
 public class TestLove &#123;
 
     public static void main(String[] args) &#123;
-        
+
         ILove iLove = new ILove() &#123;
             @Override
             public void love(String a) &#123;
@@ -831,12 +831,12 @@ interface ILove &#123; void love(String a);&#125;
 <pre><code class="java">//lambda表达式
 ublic class TestLove &#123;
     public static void main(String[] args) &#123;
-        
+
         ILove love = (String a)-&gt; &#123;
             System.out.println(&quot;I love --&quot; + a);
         &#125;;
         love.love(&quot;zzz&quot;);
-        
+
     &#125;
 &#125;
 
@@ -890,7 +890,7 @@ interface ILove &#123; void love(String a);&#125;
 </code></pre>
 <p>总结：</p>
 <ol>
-<li>lambda表达式代码只有一行的情况下才能简化为一行，有多行时必须用花括号包裹；</li>
+<li>lambda 表达式代码只有一行的情况下才能简化为一行，有多行时必须用花括号包裹；</li>
 <li>前提示接口为函数式接口（只包含一个方法）；</li>
 <li>多个参数也可以去掉参数类型，留就都留，去就都去，必须加上括号；</li>
 </ol>
@@ -898,7 +898,7 @@ interface ILove &#123; void love(String a);&#125;
 <p><strong>线程的方法</strong></p>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/article/JAVA-%E7%BA%BF%E7%A8%8B-20210418/image-20210411183039107.png" alt="image-20210411183039107" class="lazyload"></p>
 <h3 id="停止线程"><a href="#停止线程" class="headerlink" title="停止线程"></a>停止线程</h3><ol>
-<li>不推荐使用JDK提供的<code>stop(); destroy();</code>方法；</li>
+<li>不推荐使用 JDK 提供的<code>stop(); destroy();</code>方法；</li>
 <li>推荐线程自己停止；</li>
 <li>建议使用一个标志位进行终止变量；</li>
 </ol>
@@ -943,10 +943,10 @@ public class TestStop implements Runnable &#123;
 </code></pre>
 <h3 id="线程休眠"><a href="#线程休眠" class="headerlink" title="线程休眠"></a>线程休眠</h3><ol>
 <li>sleep(时间) 指定当前线程阻塞的毫秒数；</li>
-<li>sleep存在异常InterruptException；</li>
-<li>sleep时间达到后线程进入就绪状态；</li>
-<li>sleep可以模拟网络延时，倒计时等；</li>
-<li>每一个对象都有一个锁，sleep不会释放锁；</li>
+<li>sleep 存在异常 InterruptException；</li>
+<li>sleep 时间达到后线程进入就绪状态；</li>
+<li>sleep 可以模拟网络延时，倒计时等；</li>
+<li>每一个对象都有一个锁，sleep 不会释放锁；</li>
 </ol>
 <pre><code class="java">//模拟倒计时 10s
 public class TestSleep2 &#123;
@@ -975,14 +975,14 @@ public class TestSleep2 &#123;
             System.out.println(new SimpleDateFormat(&quot;HH:mm:ss&quot;).format(startTime));
             startTime = new Date(System.currentTimeMillis());
         &#125;
-       
+
     &#125;
 &#125;
 </code></pre>
 <h3 id="线程礼让"><a href="#线程礼让" class="headerlink" title="线程礼让"></a>线程礼让</h3><ol>
 <li>礼让线程，让当前正在执行的线程暂停，但不阻塞；</li>
 <li>将线程从运行状态转为就绪状态；</li>
-<li><strong>让cpu重新调度，礼让不一定成功！看CPU心情；</strong></li>
+<li><strong>让 cpu 重新调度，礼让不一定成功！看 CPU 心情；</strong></li>
 </ol>
 <pre><code class="java">/**
  * 测试礼让程序
@@ -1007,9 +1007,9 @@ public class TestYield implements Runnable &#123;
 //每次结果 都！不！一！样！ ？？？？？？？？？  -_-|||
 </code></pre>
 <h3 id="合并线程"><a href="#合并线程" class="headerlink" title="合并线程"></a>合并线程</h3><ol>
-<li>join合并线程，待此线程执行完成后再执行其他线程，其他线程阻塞；</li>
+<li>join 合并线程，待此线程执行完成后再执行其他线程，其他线程阻塞；</li>
 <li>可以想象成插队；</li>
-<li>join前是交替执行；并不是不执行！！！</li>
+<li>join 前是交替执行；并不是不执行！！！</li>
 </ol>
 <pre><code class="java">public class TestJoin implements Runnable &#123;
     @Override
@@ -1077,8 +1077,8 @@ public class TestState &#123;
 &#125;
 </code></pre>
 <h3 id="多线程优先级"><a href="#多线程优先级" class="headerlink" title="多线程优先级"></a>多线程优先级</h3><ol>
-<li>java提供一个线程调度器来监控程序中启动后进入就绪状态的所有线程，调度器按照优先级决定应该调度哪个线程来执行；</li>
-<li>线程的优先级用数字表示，范围从1~10 ；<ol>
+<li>java 提供一个线程调度器来监控程序中启动后进入就绪状态的所有线程，调度器按照优先级决定应该调度哪个线程来执行；</li>
+<li>线程的优先级用数字表示，范围从 1~10 ；<ol>
 <li><code>Thread.MAX_PRIORITY = 10;</code></li>
 <li><code>Thread.MIN_PRIORITY = 1;</code></li>
 <li><code>Thread.NORM_PRIORITY = 5;</code></li>
@@ -1291,10 +1291,10 @@ class Drawing extends Thread&#123;
 &#125;
 </code></pre>
 <h2 id="同步方法-synchronized"><a href="#同步方法-synchronized" class="headerlink" title="同步方法 - synchronized"></a>同步方法 - synchronized</h2><ol>
-<li><p>由于我们可以通过private关键字来保证数据对象只能被方法访问，所以我们只需要针对方法提出一套机制，这套机制就是 <em>synchronized</em> 关键字，它包括两种用法：<code>synchronized</code> 方法和 <code>synchronized</code> 块；</p>
+<li><p>由于我们可以通过 private 关键字来保证数据对象只能被方法访问，所以我们只需要针对方法提出一套机制，这套机制就是 <em>synchronized</em> 关键字，它包括两种用法：<code>synchronized</code> 方法和 <code>synchronized</code> 块；</p>
 <p>同步方法 <code>public synchronized void method(int args)&#123; &#125;</code>；</p>
 </li>
-<li><p>synchronized方法控制对“对象”的访问，每个对象对应一把锁，每个synchronized方法都必须获得调用该方法的对象的锁才能执行，否则线程会阻塞，方法一旦执行，就独占该锁，直到该方法返回才释放锁，后面被阻塞的线程才能获得这个锁，继续执行；</p>
+<li><p>synchronized 方法控制对“对象”的访问，每个对象对应一把锁，每个 synchronized 方法都必须获得调用该方法的对象的锁才能执行，否则线程会阻塞，方法一旦执行，就独占该锁，直到该方法返回才释放锁，后面被阻塞的线程才能获得这个锁，继续执行；</p>
 </li>
 </ol>
 <pre><code class="java">//买票
@@ -1341,10 +1341,10 @@ class BuyTicket implements Runnable&#123;
 </code></pre>
 <p><strong>同步块</strong></p>
 <p>同步块：synchronized(Obj) {}</p>
-<p>Obj称为同步监视器</p>
+<p>Obj 称为同步监视器</p>
 <ol>
-<li>Obj可以是任何对象，但是推荐使用共享资源作为同步监视器；</li>
-<li>同步方法中无需指定同步监视器，因为同步方法的同步监视器就是this，就是这个对象本身，或者是class【反射中讲解】</li>
+<li>Obj 可以是任何对象，但是推荐使用共享资源作为同步监视器；</li>
+<li>同步方法中无需指定同步监视器，因为同步方法的同步监视器就是 this，就是这个对象本身，或者是 class【反射中讲解】</li>
 </ol>
 <p>同步监视器的执行过程：</p>
 <ol>
@@ -1436,7 +1436,7 @@ class Drawing extends Thread &#123;
     &#125;
 &#125;
 </code></pre>
-<h2 id="JUC安全类型的集合-CopyOnWriteArrayList"><a href="#JUC安全类型的集合-CopyOnWriteArrayList" class="headerlink" title="JUC安全类型的集合-CopyOnWriteArrayList"></a>JUC安全类型的集合-CopyOnWriteArrayList</h2><pre><code class="java">public class TestJUC &#123;
+<h2 id="JUC-安全类型的集合-CopyOnWriteArrayList"><a href="#JUC-安全类型的集合-CopyOnWriteArrayList" class="headerlink" title="JUC 安全类型的集合-CopyOnWriteArrayList"></a>JUC 安全类型的集合-CopyOnWriteArrayList</h2><pre><code class="java">public class TestJUC &#123;
     public static void main(String[] args) &#123;
         CopyOnWriteArrayList&lt;String&gt; list = new CopyOnWriteArrayList&lt;&gt;();
         for (int i = 0; i &lt; 100; i++) &#123;
@@ -1738,15 +1738,15 @@ class TestLock2 implements Runnable &#123;
     &#125;
     finally&#123;
             lock.unlock();
-      // 如果同步代码有异常，要将unlock()写入finally语句块 
+      // 如果同步代码有异常，要将unlock()写入finally语句块
     &#125;
   &#125;
 &#125;
 </code></pre>
-<h2 id="synchronized-与-lock的对比"><a href="#synchronized-与-lock的对比" class="headerlink" title="synchronized 与 lock的对比"></a>synchronized 与 lock的对比</h2><ol>
-<li>Lock是显示锁，需要手动开启和关闭，synchronized为隐式锁，出了作用域自动释放</li>
-<li>lock只有代码块锁，synchronized有代码块锁和方法锁</li>
-<li>使用lock锁，jvm将花费较少的时间来调度线程，性能更好。并且具有更好的扩展性</li>
+<h2 id="synchronized-与-lock-的对比"><a href="#synchronized-与-lock-的对比" class="headerlink" title="synchronized 与 lock 的对比"></a>synchronized 与 lock 的对比</h2><ol>
+<li>Lock 是显示锁，需要手动开启和关闭，synchronized 为隐式锁，出了作用域自动释放</li>
+<li>lock 只有代码块锁，synchronized 有代码块锁和方法锁</li>
+<li>使用 lock 锁，jvm 将花费较少的时间来调度线程，性能更好。并且具有更好的扩展性</li>
 <li>优先使用顺序<ul>
 <li>Lock &gt; 同步代码块（已经进入方法体，分配了相应资源）&gt; 同步方法(在方法体之外)</li>
 </ul>
@@ -1756,13 +1756,13 @@ class TestLock2 implements Runnable &#123;
 <ol>
 <li>对于生产者，没有生产产品之前，要通知消费者等待，而生产了产品之后，有需要马上通知消费者消费</li>
 <li>对于消费者，在消费之后，要通知生产者已经结束消费，需要生产新的产品以供消费</li>
-<li>在生产者消费者问题中，仅有synchronized是不够的<ol>
-<li>synchronized可组织并发更新同一个共享资源，实现了同步</li>
-<li>synchronized不能用来实现不同线程之间的消息传递（通信）</li>
+<li>在生产者消费者问题中，仅有 synchronized 是不够的<ol>
+<li>synchronized 可组织并发更新同一个共享资源，实现了同步</li>
+<li>synchronized 不能用来实现不同线程之间的消息传递（通信）</li>
 </ol>
 </li>
 </ol>
-<p>Java提供了几个方法解决线程之间的通信问题</p>
+<p>Java 提供了几个方法解决线程之间的通信问题</p>
 <table>
 <thead>
 <tr>
@@ -1772,7 +1772,7 @@ class TestLock2 implements Runnable &#123;
 </thead>
 <tbody><tr>
 <td align="left">wait()</td>
-<td align="left">表示线程一直等待，直到其他线程通知，与sleep（）不同，会释放锁</td>
+<td align="left">表示线程一直等待，直到其他线程通知，与 sleep（）不同，会释放锁</td>
 </tr>
 <tr>
 <td align="left">wait(long timeout)</td>
@@ -1784,10 +1784,10 @@ class TestLock2 implements Runnable &#123;
 </tr>
 <tr>
 <td align="left">notifyAll()</td>
-<td align="left">唤醒同一个对象上所有调用wait（）方法的线程，优先级别高的线程优先调度</td>
+<td align="left">唤醒同一个对象上所有调用 wait（）方法的线程，优先级别高的线程优先调度</td>
 </tr>
 </tbody></table>
-<p><strong>注意：</strong> 均是Object类的方法，都只能在同步方法或者同步代码快中使用，否则会抛出异常 <code>IllegalMonitorStateException</code></p>
+<p><strong>注意：</strong> 均是 Object 类的方法，都只能在同步方法或者同步代码快中使用，否则会抛出异常 <code>IllegalMonitorStateException</code></p>
 <h3 id="管程法"><a href="#管程法" class="headerlink" title="管程法"></a>管程法</h3><ol>
 <li><p>生产者：负责生产数据的模块（可能是方法、对象、线程、进程）</p>
 </li>
@@ -1982,18 +1982,15 @@ class TV&#123;
 <p>思路：提前创建好多个线程，放入线程池中，使用时直接获取，使用完放回池中。可以避免频繁创建销毁、实现重复利用。类似生活中的交通工具。</p>
 <p>好处：</p>
 <pre><code>1. 提高响应速度（减少创建新线程的时间）
-
-   2. 降低资源消耗（重复利用线程池中的线程，不需要每次都创建）
-            3. 便于线程管理
-                     1. corePoolSize：最大线程数；
-                     2. maxmumPoolSize：最大线程数；
-                     3. keepAliveTime：线程没有任务时最多保持多长时间后会终止；
 </code></pre>
+<ol start="2">
+<li>降低资源消耗（重复利用线程池中的线程，不需要每次都创建） 3. 便于线程管理 1. corePoolSize：最大线程数； 2. maxmumPoolSize：最大线程数； 3. keepAliveTime：线程没有任务时最多保持多长时间后会终止；</li>
+</ol>
 <h2 id="使用线程池"><a href="#使用线程池" class="headerlink" title="使用线程池"></a>使用线程池</h2><ol>
-<li>jdk5.0  线程池相关API ：ExecutorService 和 Executors；</li>
-<li>ExecutorService ：真正的线程池接口。常见子类ThreadPoolExecutor；<ol>
-<li>void execute(Runnable command) : 执行任务/命令，没有返回值，一般用来执行Runnable；</li>
-<li><T>Future<T> submit(Callable<T> task): 执行任务，有返回值，一般用来执行Callable；</li>
+<li>jdk5.0 线程池相关 API ：ExecutorService 和 Executors；</li>
+<li>ExecutorService ：真正的线程池接口。常见子类 ThreadPoolExecutor；<ol>
+<li>void execute(Runnable command) : 执行任务/命令，没有返回值，一般用来执行 Runnable；</li>
+<li><T>Future<T> submit(Callable<T> task): 执行任务，有返回值，一般用来执行 Callable；</li>
 <li>void shutdown(): 关闭连接池；</li>
 </ol>
 </li>
@@ -2132,7 +2129,7 @@ class MyThread3 implements Callable&lt;Integer&gt;&#123;
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1650892957187"></script>
+<script src="/js/app.js?v=1655179985793"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
