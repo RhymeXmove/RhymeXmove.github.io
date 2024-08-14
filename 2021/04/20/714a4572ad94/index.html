@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 
-<html lang="
-zh-CN"
-    >
+<html 
+	lang=" zh-CN" >
 
-        <head>
-            
-                <title>
-                    
-                        Leetcode-002-两数相加 -
-                            
-                                shanX&#39;s Blog
-                </title>
-                <meta charset="UTF-8">
-                <meta name="description" content="">
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-                
-                    
+	<head>
+		
+		<title> Leetcode-002-两数相加 -  shanX&#39;s Blog</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+		 
 
-                        <link rel="shortcut icon" href="/image/author.png" type="image/png" />
-                        <meta name="description" content="两数相加-我是废物T-T">
+		<link rel="shortcut icon" href="/image/author.png" type="image/png" />
+		<meta name="description" content="两数相加-我是废物T-T">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode-002-两数相加">
 <meta property="og:url" content="https://rhymexmove.github.io/2021/04/20/714a4572ad94/index.html">
@@ -31,38 +24,67 @@ zh-CN"
 <meta property="article:author" content="shanX">
 <meta property="article:tag" content="Leetcode">
 <meta name="twitter:card" content="summary">
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233"
-                                crossorigin>
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
-                            <!--适用于 Retina 屏的 iPad-->
-                            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png">
-                            <!--适用于 Retina 屏的 iPhone-->
-                            <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png">
-                            <!--适用于非 Retina 屏的 iPad-->
-                            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png">
-                            <!--适用于非 Retina 屏的 iPhone-->
-                            <link rel="apple-touch-icon-precomposed" href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png">
-                            
-                                <link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_fmjyoao96km.css">
-                                
-                                    <link rel="stylesheet" href="/css/style.css?v=1723642005906">
-        <meta name="generator" content="Hexo 5.4.0"></head>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233"
+			crossorigin
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"
+		/>
+		<!--适用于 Retina 屏的 iPad-->
+		<link
+			rel="apple-touch-icon-precomposed"
+			sizes="144x144"
+			href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png"
+		/>
+		<!--适用于 Retina 屏的 iPhone-->
+		<link
+			rel="apple-touch-icon-precomposed"
+			sizes="120x120"
+			href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png"
+		/>
+		<!--适用于非 Retina 屏的 iPad-->
+		<link
+			rel="apple-touch-icon-precomposed"
+			sizes="72x72"
+			href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png"
+		/>
+		<!--适用于非 Retina 屏的 iPhone-->
+		<link
+			rel="apple-touch-icon-precomposed"
+			href="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png"
+		/>
+		
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_2490857_fmjyoao96km.css" />
+		 <link rel="stylesheet" href="/css/style.css?v=1723643729425">
+	<meta name="generator" content="Hexo 5.4.0"></head>
 
-        <body class="mdui-drawer-body-left">
-            
-                <div id="nexmoe-background">
-                    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/cover/5887c2f1-b191-4890-aab5-2ce62d9955df.jpg)"></div>
-                    <div class="mdui-appbar mdui-shadow-0">
-                        <div class="mdui-toolbar">
-                            <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
-                            <div class="mdui-toolbar-spacer"></div>
-                            <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-                            <a href="/" title="shanX" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png" alt="shanX"></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="nexmoe-header">
-                    <div class="nexmoe-drawer mdui-drawer" id="drawer">
+	<body class="mdui-drawer-body-left">
+		
+		<div id="nexmoe-background">
+			<div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/cover/5887c2f1-b191-4890-aab5-2ce62d9955df.jpg)"></div>
+			<div class="mdui-appbar mdui-shadow-0">
+				<div class="mdui-toolbar">
+					<a
+						mdui-drawer="{target: '#drawer', swipe: true}"
+						title="menu"
+						class="mdui-btn mdui-btn-icon mdui-ripple"
+						><i class="mdui-icon nexmoefont icon-menu"></i
+					></a>
+					<div class="mdui-toolbar-spacer"></div>
+					<!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+					<a
+						href="/"
+						title="shanX"
+						class="mdui-btn mdui-btn-icon"
+						><img src="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png" alt="shanX"
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="/" title="shanX">
             <img src="https://cdn.jsdelivr.net/gh/RhymeXmove/blogimg@latest/author.png" alt="shanX" alt="shanX">
@@ -286,11 +308,10 @@ zh-CN"
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
     </div>
-</div><!-- .nexmoe-drawer -->
-                </div>
-                <div id="nexmoe-content">
-                    <div class="nexmoe-primary">
-                        <div class="nexmoe-post">
+</div><!-- .nexmoe-drawer --></div>
+		<div id="nexmoe-content">
+			<div class="nexmoe-primary">
+				<div class="nexmoe-post">
 
   <div class="nexmoe-post-right">
     
@@ -451,16 +472,19 @@ class ListNode &#123;
 </section>
   </div>
 </div>
-                            <div class="nexmoe-post-right">
-                                <div class="nexmoe-fixed">
-                                    <div class="nexmoe-tool">
-                                        <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+				<div class="nexmoe-post-right">
+					<div class="nexmoe-fixed">
+						<div class="nexmoe-tool">
+							<a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"
+								><button class="mdui-fab mdui-ripple">
+									<i class="nexmoefont icon-caret-top"></i></button
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
 <script>
 	hljs.initHighlightingOnLoad();
 </script>
@@ -472,7 +496,7 @@ class ListNode &#123;
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1723642005906"></script>
+<script src="/js/app.js?v=1723643729426"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -481,13 +505,11 @@ class ListNode &#123;
 		margins: 10,
 	});
 </script>
-
-                    
-
+ 
 
 
 
 
-        </body>
 
+	</body>
 </html>
